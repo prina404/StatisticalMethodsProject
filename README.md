@@ -1,5 +1,13 @@
-# StatisticalMethodsProject
-Code and report for the course Statistical Methods for Machine Learning A.A. 23/24
+<a target="_blank" href="https://colab.research.google.com/github/prina404/StatisticalMethodsProject/blob/main/notebook/SLAM_CNN.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+
+# Statistical methods for machine learning project
+
+Code and report for the course Statistical Methods for Machine Learning A.A. 23/24.
+
+The notebook containing all the experiments can be executed in Colab by clicking on the badge, or it can be run locally with docker.
 
 
 ## Docker usage
@@ -12,7 +20,8 @@ docker build --tag tf_slam:1.15 .
 Launch it with the command:
 
 ```bash
-docker run --gpus all -p 8888:8888 \
+docker run --gpus all \
+    -p 8888:8888 \
     --user "$(id -u):$(id -g)" \
     -v .:/tf/slam_dl/ \
     tf_slam:1.15
